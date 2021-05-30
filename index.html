@@ -1,8 +1,107 @@
-<!doctype html>
-<head><title>홍길동테스트홈피</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+        /* 전체css초기값 */
+        *{margin: 0;padding: 0;font-family: sans-serif;}
+        a{list-style: none;text-decoration: none;color: #fff;}
+ 
+        /* 선택자 */
+        /* header  */
+        header{background-image: url(https://cdn.imweb.me/thumbnail/20161013/57ff2b6c7eff0.jpg);
+        top: 0;height: 100vh;background-size: cover;background-position: center;}
+        .nav-bar{position: fixed; z-index:1; width: 100%;color: #fff;background: rgba(0, 0, 0, 0.7);
+        height: 80px;}
+        .nav-bar .fa-adjust{margin: 25px 40px; height: 60px;font-size: 2rem;}
+        .nav-bar ul.menu{float: right;list-style: none;margin: 30px;}
+        .nav-bar ul .fa-bars{display: none; height: 25px;font-size: 1.6rem;}
+        .nav-bar ul li{display: inline-block;}
+        .nav-bar ul li a{color: #fff;padding: 5px 10px; letter-spacing: 1.2px;}
+        .nav-bar ul li a:hover{color: aqua; transition: .4s;}
+ 
+        /* 안내문구 */
+        .welcome{position: relative; text-align: center; color: #fff; top: 300px;}
+        .welcome h1{font-size: 42px;padding-bottom: 30px;}
+        
+        /* 메인버튼 */
+        .welcome .btn{font-size: 18px;letter-spacing: 2px;margin: 5px; padding: 7px 10px;
+        border: 1px solid #fff;}
+        .welcome .btn1{background-color: #fff;color: #000;}
+        .welcome .btn2{color: #fff;}
+        .welcome .btn2:hover{background-color: #fff; color: #000;transition: .4s;}
+        .welcome h4{margin-top: 30px;}
+ 
+        /* 탑버튼 */
+        #myBtn{display: block;position: fixed;bottom: 20px;right: 20px;z-index: 2;font-size: 18px;
+        border: none;outline: none;background-color: red;color: white;cursor: pointer;
+        border-radius: 4px;padding: 15px;}
+        #myBtn:hover{background-color: aqua;color: #000;}
+ 
+ 
+        /* 반응형 */
+        @media screen and (max-width:768px) {
+            .nav-bar ul li{display: none;}
+            .nav-bar ul .fa-bars{display: block;}
+        }
+ 
+ 
+    </style>
+</head>
 <body>
-	<h1>홍길동 홈피 셋팅</1h><br>
-	<img src="img/big.jpg">
-	<h1>연결 셋팅셋팅 축</1h><br>
+    <header>
+        <div class="nav-bar">
+            <!-- logo -->
+            <i class="fas fa-adjust"></i>
+            <!-- menu -->
+            <ul class="menu">
+                <i class="fas fa-bars"></i>
+                <li><a href="#">home</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">testimonial</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="welcome">
+            <h1>Are you new on my channel!</h1>
+            <a href="#" class="btn btn1">like video</a>
+            <a href="#" class="btn btn2">subscribe</a>
+            <h4>안내문구 안녕하세요 방갑습니다.</h4>
+        </div>
+    </header>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates dolores nemo quia eum reiciendis error praesentium itaque nisi sequi, excepturi facere cupiditate, aperiam iure dolore? Deleniti, tenetur! Est, culpa.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates dolores nemo quia eum reiciendis error praesentium itaque nisi sequi, excepturi facere cupiditate, aperiam iure dolore? Deleniti, tenetur! Est, culpa.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates dolores nemo quia eum reiciendis error praesentium itaque nisi sequi, excepturi facere cupiditate, aperiam iure dolore? Deleniti, tenetur! Est, culpa.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates dolores nemo quia eum reiciendis error praesentium itaque nisi sequi, excepturi facere cupiditate, aperiam iure dolore? Deleniti, tenetur! Est, culpa.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates dolores nemo quia eum reiciendis error praesentium itaque nisi sequi, excepturi facere cupiditate, aperiam iure dolore? Deleniti, tenetur! Est, culpa.</p>
+    </section>
+ 
+    <button id="myBtn" onclick="topFunction()">Top</button>
+    <script>
+        const mybutton = document.getElementById("myBtn");
+        window.onscroll = function(){
+            scrollFunction()
+        }
+ 
+        // 스크롤이 발생할때 아래 유무
+        function scrollFunction(){
+            if(document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+                mybutton.style.display = "block";
+            }else{
+                mybutton.style.display = "none";
+            }
+        }
+        // 제일 상위로 올라가
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
